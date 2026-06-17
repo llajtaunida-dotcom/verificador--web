@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <title>Verificador de Israel Pérez</title>
+    <style>
+        body { background: #000; color: #fff; text-align: center; font-family: Arial, sans-serif; overflow: hidden; margin: 0; }
+        .burbuja { position: absolute; background: rgba(0, 150, 255, 0.5); border-radius: 50%; animation: flotar 4s infinite; }
+        @keyframes flotar { 0% { transform: translateY(100vh); } 100% { transform: translateY(-10vh); } }
+        h1 { margin-top: 20%; color: #00d4ff; }
+    </style>
+</head>
+<body>
+    <h1>Verificación de Identidad</h1>
+    <p>Nombre: <strong>Israel Pérez</strong></p>
+    <p>Estado: <strong>Verificado</strong></p>
+    <script>
+        for(let i=0; i<15; i++) {
+            let b = document.createElement('div');
+            b.className = 'burbuja';
+            b.style.width = b.style.height = (Math.random()*50 + 20) + 'px';
+            b.style.left = Math.random()*100 + '%';
+            b.style.animationDelay = Math.random()*3 + 's';
+            document.body.appendChild(b);
+        }
+    </script>
+</body>
+</html>
